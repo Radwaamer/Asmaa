@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +32,60 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+
+
+/* *{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: none;
+}
+*::selection{
+  color: #fff;
+  background-color: var(--main-color);
+}
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: 16px;
+}
+html::-webkit-scrollbar-track{
+  background-color: #3ab7ff68;
+  box-shadow: 0 0 12px #333 inset;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: rgba(39, 37, 37, 0.858);
+  border-radius: 30px;
+}
+html::-webkit-scrollbar-thumb:hover{
+  background-color: #dbd8e38d;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(22,10,60);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+} */
+
+
+*{
+  font-family: "Marhey", sans-serif;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
 }
