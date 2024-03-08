@@ -3,8 +3,11 @@ import {  useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { useEffect } from 'react';
 import useFetch from '../custom hooks/FetchCommerce';
+import { useParams, useRouter } from 'next/navigation';
 const Pagination = () => {
     const count= useFetch("pagination","simple");
+    const router = useRouter();
+    const params= useParams();
 
     const [windowWidth, setWindowWidth] = useState(count);
     useEffect(()=>{
@@ -28,15 +31,15 @@ const Pagination = () => {
         });
     },[windowWidth]);
 
-
     return (
         <ReactPaginate
             breakLabel="..."
             nextLabel=">"
             // onPageChange={(e)=>handlePage(e.selected+1)}
+            onPageChange={(e) => router.push(`${e.selected+1}`)}
             pageRangeDisplayed={windowWidth}
             marginPagesDisplayed={2}
-            pageCount={count["total_pages"]}
+            pageCount={count["total_pages"]!=undefined?count["total_pages"]:1}
             previousLabel="<"
             renderOnZeroPageCount={null}
             className={`flex gap-3 justify-center items-center pb-5 mt-8`}
@@ -49,7 +52,7 @@ const Pagination = () => {
             nextLinkClassName={`py-1 px-3`}
             disabledLinkClassName={`text-gray-400`}
             // breakClassName={`break`}
-            forcePage={0}
+            forcePage={+params.page-1}
         />
     )
 }

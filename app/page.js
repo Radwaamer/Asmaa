@@ -1,9 +1,9 @@
 import Button from "./components/Button";
 
 export default function Home() {
-  const cat= {slug:"deals",assets:[{url:"/assets/sideBarIcons/contact.png"}],name:"اخر العروض"};
+  const cat= {slug:"deals",assets:[{url:"/assets/sideBarIcons/discount.png"}],name:"اخر العروض"};
   return (
-    <div className="text-center py-20 px-20 leading-9 lg:w-3/4">
+    <div className="content py-20 text-center leading-9">
       <h4 className="text-2xl mb-4">ازيك يارب تكوني بخير ويومك جميل انا اسماء وتقدرى تقوليلي يا سمسمة</h4>
       <p>
         بما ان السرعة في التنفيذ هى اللي ميزتنى واحساسى الدائم بحبى للمساعدة في اختيار انسب حاجة تليق بيا وبكل اللي حواليا

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className='py-6 px-20 flex justify-center items-center flex-col lg:w-3/4 gap-7'>
+        <div className='content flex justify-center items-center flex-col gap-7'>
             <div>
                 <p className='text-3xl mb-4 text-center'>تقدري تبعتيلي علي :</p>
                 <div className='flex gap-4'>

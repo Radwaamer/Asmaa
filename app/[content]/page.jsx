@@ -1,16 +1,14 @@
+import { redirect } from 'next/navigation'
 import React from 'react'
-import Title from './Title'
-import Cards from './Cards'
-import Pagination from '../components/Pagination'
 
-const Content = () => {
+const Content = ({params}) => {
+    if(params.content!="contact"){
+        redirect(`${params.content}/1`);
+    }
+    console.log(params.content)
     return (
-        <div className='lg:w-3/4 py-6 px-20 h-screen'>
-            <Title />
-            <Cards/>
-            <Pagination />
-        </div>
+        <div></div>
     )
 }
 
-export default Content;
+export default Content
