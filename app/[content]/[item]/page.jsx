@@ -10,7 +10,7 @@ const Item = () => {
     const item= useGet("product",params.item);
     console.log(item);
     return (
-        <div className="flex md:grid flex-col-reverse md:grid-cols-2 py-9 w-full justify-around px-20 gap-5">
+        <div className="flex md:grid flex-col-reverse md:grid-cols-2 py-6 w-full justify-around px-20 gap-5">
             <Description item={item}/>
             <Slider item={item}/>
         </div>
