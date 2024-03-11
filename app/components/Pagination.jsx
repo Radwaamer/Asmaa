@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 import useFetch from '../custom hooks/FetchCommerce';
 import { useParams, useRouter } from 'next/navigation';
 const Pagination = () => {
-    const count= useFetch("pagination","simple");
-    const router = useRouter();
     const params= useParams();
+    const count= useFetch("pagination",params.content);
+    const router = useRouter();
 
     const [windowWidth, setWindowWidth] = useState(count);
     useEffect(()=>{
@@ -35,14 +35,13 @@ const Pagination = () => {
         <ReactPaginate
             breakLabel="..."
             nextLabel=">"
-            // onPageChange={(e)=>handlePage(e.selected+1)}
             onPageChange={(e) => router.push(`${e.selected+1}`)}
             pageRangeDisplayed={windowWidth}
             marginPagesDisplayed={2}
             pageCount={count["total_pages"]!=undefined?count["total_pages"]:1}
             previousLabel="<"
             renderOnZeroPageCount={null}
-            className={`flex gap-3 justify-center items-center pb-5 mt-8`}
+            className={`flex gap-3 justify-center items-center mt-8`}
             pageLinkClassName={`py-1 flex justify-center items-center px-3`}
             activeLinkClassName={`bg-[gold] rounded-md text-white scale-110 transition-all`}
             pageClassName={`border rounded-md`}

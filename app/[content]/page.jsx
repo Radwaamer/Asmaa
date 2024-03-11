@@ -5,7 +5,6 @@ const Content = ({params}) => {
     if(params.content!="contact"){
         redirect(`${params.content}/1`);
     }
-    console.log(params.content)
     return (
         <div></div>
     )
